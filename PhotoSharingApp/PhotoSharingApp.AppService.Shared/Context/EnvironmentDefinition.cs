@@ -47,10 +47,10 @@ namespace PhotoSharingApp.AppService.Shared.Context
                         // We have supplied a default DatabaseId and CollectionId here, feel free to configure your own.
                         // On first time startup, the service will create a DocumentDB database and collection for you
                         // if none exist with these names.
-                        DataBaseId = "photosharing-database",
-                        CollectionId = "photosharing-document-data",
-                        EndpointUrl = "[Your Azure DocumentDB Endpoint URL]",
-                        AuthorizationKey = "[Your Azure DocumentDB Authorization Id]"
+                        DataBaseId = "runningpicsdb",
+                        CollectionId = "runningpics_collection",
+                        EndpointUrl = "https://runningpics.documents.azure.com:443/",
+                        AuthorizationKey = "YCsHY3OCmggS5cd0ml7FrjSug1FTXdl7aBgo1gAicXT2e2zXVFSazLQdoTJ9MATLsxYRQVmvm6oF4n9sp5Izag=="
                     };
                 }
 
@@ -65,7 +65,7 @@ namespace PhotoSharingApp.AppService.Shared.Context
         {
             get
             {
-                return "[Your Notification Hub's Full Shared Access Signature]";
+                return "Endpoint=sb://runningpicsnotification-ns.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=ZFBL/YzCkBWltYhldmP4xoHyCukj2wODFarzABRWuEI=";
             }
         }
 
@@ -74,7 +74,7 @@ namespace PhotoSharingApp.AppService.Shared.Context
         /// </summary>
         public override string HubName
         {
-            get { return "[Your Notification Hub Name]"; }
+            get { return "runningpicsnotificationhub"; }
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace PhotoSharingApp.AppService.Shared.Context
         /// </summary>
         public override string InstrumentationKey
         {
-            get { return "[You App Insights Instrumentation Key]"; }
+            get { return "a463a98a-fdaa-4117-8011-f94b909aa97d"; }
         }
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace PhotoSharingApp.AppService.Shared.Context
         /// </summary>
         public override string StorageAccessKey
         {
-            get { return "[Your Azure Storage access key]"; }
+            get { return "b2Y5eNpiADN3UjxI47qyTPTUhhvq31suYNN0crpsUv6GyPA1/jgi8s8xlu7t+yo3/UAMZ2P+OTjcCRTT5d2XZA=="; }
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace PhotoSharingApp.AppService.Shared.Context
         /// </summary>
         public override string StorageAccountName
         {
-            get { return "[Your Azure Storage account name]"; }
+            get { return "runningpicsapp"; }
         }
     }
 }
